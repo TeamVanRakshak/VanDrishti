@@ -16,6 +16,10 @@ powershell -ExecutionPolicy Bypass -File .\setup.ps1
 
 The ZIP includes the prepared wildlife detector. Setup installs dependencies and downloads the CLIP naming weights (about 338 MB). If prepared detector weights are missing, setup prepares them using the official YOLOE weights and a larger text encoder. Internet is needed for initial setup and map tiles. Inference thereafter runs locally without internet. The virtual environment is not portable; recreate it on another machine.
 
+## API (backend)
+
+The FastAPI service that will replace the dashboard: double-click **start-backend.cmd** and open http://127.0.0.1:8000/docs. It accepts image uploads, analyses them in the background with the same pipeline as the dashboard, and serves filtered detections. See [backend/README.md](backend/README.md).
+
 ## Recognition engines
 
 **Wildlife (default):** YOLOE-11m finds objects at 960-pixel inference size. Prepared text embeddings allow it to search for 47 named wildlife/object targets. CLIP ViT-B/32 then compares animal crops against candidate names. A sufficiently separated match becomes an AI species estimate; weak distinctions remain `animal (unverified)`. No reserve-specific training has been performed.

@@ -1,6 +1,6 @@
 """Run every project check. A phase is complete only when this exits with code 0.
 
-    python run_checks.py                  # unit tests, real-model smoke test, evaluation set integrity
+    python run_checks.py                  # evaluation set, unit and API tests, real-model and API server smoke tests
     python run_checks.py --eval --phase 3 # also evaluate the models and enforce targets due by phase 3
 """
 import argparse
@@ -56,6 +56,7 @@ def main():
         step("Evaluation set", [python, "evaluation/eval_set.py", "verify"]),
         step("Unit tests", [python, "-m", "unittest", "discover", "-s", "tests", "-v"]),
         step("Real-model smoke test", [python, "smoke_test.py"]),
+        step("API server smoke test", [python, "-m", "backend.smoke_test"]),
     ]
     if args.eval:
         results.append(step("Model evaluation", [python, "evaluation/evaluate.py"]))

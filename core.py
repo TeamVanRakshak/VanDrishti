@@ -7,7 +7,7 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageOps
 from vocabulary import WILDLIFE
 
 ROOT = Path(__file__).resolve().parent
@@ -56,6 +56,33 @@ def verification_labels(detections):
             item["label"] = "animal (unverified)"
         output.append(item)
     return output
+
+
+def analyze(raw_detections, restricted, authorized):
+    """Shared by the dashboard and the API: apply the labelling policy, then the access rule."""
+    detections = verification_labels(raw_detections)
+    status, reason = assess(detections, restricted, authorized)
+    return detections, status, reason
+
+
+MAX_PIXELS = 24_000_000
+
+
+class ImageTooLarge(ValueError):
+    pass
+
+
+def load_image(file):
+    """Open an upload the way every entry point must: size limit, EXIF rotation, RGB, at most 1920 px.
+
+    Raises ImageTooLarge, or PIL.UnidentifiedImageError / OSError / Image.DecompressionBombError for unreadable files.
+    """
+    with Image.open(file) as opened:
+        if opened.width * opened.height > MAX_PIXELS:
+            raise ImageTooLarge("Please use an image below 24 megapixels.")
+        image = ImageOps.exif_transpose(opened).convert("RGB")
+    image.thumbnail((1920, 1920))
+    return image
 
 
 def correct_detections(detections, labels):

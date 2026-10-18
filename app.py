@@ -7,9 +7,9 @@ from collections import Counter
 
 import numpy as np
 import streamlit as st
-from PIL import Image, ImageOps, UnidentifiedImageError
+from PIL import Image, UnidentifiedImageError
 
-from core import CAMERAS, annotate, assess, category, history, save_observation, update_review, verification_labels, correct_detections, update_detections, ANIMALS, VEHICLES
+from core import CAMERAS, analyze, annotate, assess, category, history, load_image, save_observation, update_review, verification_labels, correct_detections, update_detections, ANIMALS, VEHICLES, ImageTooLarge
 from detector import load_model, predict
 
 st.set_page_config(page_title="VanRakshak | Wildlife command center", page_icon="🌿", layout="wide")
@@ -72,14 +72,11 @@ with monitor:
         image_file = upload
         if image_file is not None:
             try:
-                with Image.open(image_file) as opened:
-                    if opened.width * opened.height > 24_000_000:
-                        st.error("Please use an image below 24 megapixels.")
-                    else:
-                        image = ImageOps.exif_transpose(opened).convert("RGB")
-                        image.thumbnail((1920, 1920))
-                        source = upload.name
-                        st.image(image, caption=source, width="stretch")
+                image = load_image(image_file)
+                source = upload.name
+                st.image(image, caption=source, width="stretch")
+            except ImageTooLarge as error:
+                st.error(str(error))
             except (UnidentifiedImageError, OSError, Image.DecompressionBombError):
                 st.error("This file could not be read as a supported image. Try another JPG or PNG.")
         else:
@@ -108,8 +105,7 @@ with monitor:
         st.session_state.pop("result", None)
         try:
             with st.spinner("Analyzing imagery…"):
-                detections = verification_labels(predict(model(profile), image, threshold))
-                status, reason = assess(detections, restricted, authorized)
+                detections, status, reason = analyze(predict(model(profile), image, threshold), restricted, authorized)
                 brightness = float(np.asarray(image.convert("L")).mean())
                 record = dict(mode=mode, camera=camera, lat=lat, lon=lon, source=source,
                               restricted=int(restricted), authorized=int(authorized), threshold=threshold,
