@@ -1,0 +1,144 @@
+[
+  {
+    "label": "person",
+    "confidence": 0.9572,
+    "box": [
+      226.1,
+      408.0,
+      342.3,
+      857.8
+    ],
+    "model_label": "person",
+    "verified": false,
+    "species_candidate": true,
+    "detector": "YOLOE-11m + CLIP / 960px",
+    "name_candidates": [
+      {
+        "label": "person",
+        "similarity": 0.2441
+      },
+      {
+        "label": "goat",
+        "similarity": 0.23
+      },
+      {
+        "label": "snake",
+        "similarity": 0.2115
+      }
+    ],
+    "name_similarity": 0.2441,
+    "name_margin": 0.0141,
+    "naming_model": "CLIP ViT-B/32",
+    "naming_status": "AI estimate"
+  },
+  {
+    "label": "person",
+    "confidence": 0.9411,
+    "box": [
+      671.2,
+      392.9,
+      809.0,
+      877.9
+    ],
+    "model_label": "person",
+    "verified": false,
+    "species_candidate": true,
+    "detector": "YOLOE-11m + CLIP / 960px",
+    "name_candidates": [
+      {
+        "label": "bus",
+        "similarity": 0.2561
+      },
+      {
+        "label": "truck",
+        "similarity": 0.2277
+      },
+      {
+        "label": "car",
+        "similarity": 0.2124
+      }
+    ],
+    "name_similarity": 0.2561,
+    "name_margin": 0.0284,
+    "naming_model": "CLIP ViT-B/32",
+    "naming_status": "AI estimate"
+  },
+  {
+    "label": "person",
+    "confidence": 0.9355,
+    "box": [
+      53.7,
+      399.0,
+      244.5,
+      902.1
+    ],
+    "model_label": "person",
+    "verified": false,
+    "species_candidate": true,
+    "detector": "YOLOE-11m + CLIP / 960px",
+    "name_candidates": [
+      {
+        "label": "bear",
+        "similarity": 0.2524
+      },
+      {
+        "label": "goat",
+        "similarity": 0.2511
+      },
+      {
+        "label": "person",
+        "similarity": 0.2496
+      }
+    ],
+    "name_similarity": 0.2524,
+    "name_margin": 0.0013,
+    "naming_model": "CLIP ViT-B/32",
+    "naming_status": "Conflicting predictions \u2014 review"
+  },
+  {
+    "label": "person",
+    "confidence": 0.9032,
+    "box": [
+      0.7,
+      554.5,
+      76.0,
+      871.3
+    ],
+    "model_label": "person",
+    "verified": false,
+    "species_candidate": true,
+    "detector": "YOLOE-11m + CLIP / 960px",
+    "name_candidates": [
+      {
+        "label": "snake",
+        "similarity": 0.2236
+      },
+      {
+        "label": "person",
+        "similarity": 0.22
+      },
+      {
+        "label": "crocodile",
+        "similarity": 0.2159
+      }
+    ],
+    "name_similarity": 0.2236,
+    "name_margin": 0.0036,
+    "naming_model": "CLIP ViT-B/32",
+    "naming_status": "Conflicting predictions \u2014 review"
+  },
+  {
+    "label": "bus",
+    "confidence": 0.7746,
+    "box": [
+      94.1,
+      233.1,
+      796.9,
+      732.6
+    ],
+    "model_label": "bus",
+    "verified": false,
+    "species_candidate": true,
+    "detector": "YOLOE-11m + CLIP / 960px"
+  }
+]

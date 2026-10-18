@@ -1,0 +1,665 @@
+[
+  {
+    "model": "baseline_yolo11n",
+    "case": "giraffes",
+    "seconds": 0.47,
+    "expected_labels_present": [
+      "giraffe"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "giraffe",
+        "confidence": 0.8945,
+        "box": [
+          382.4,
+          66.0,
+          598.6,
+          357.2
+        ]
+      },
+      {
+        "label": "giraffe",
+        "confidence": 0.3549,
+        "box": [
+          50.8,
+          354.1,
+          186.3,
+          413.7
+        ]
+      }
+    ]
+  },
+  {
+    "model": "baseline_yolo11n",
+    "case": "zebra",
+    "seconds": 0.28,
+    "expected_labels_present": [
+      "zebra"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "zebra",
+        "confidence": 0.8658,
+        "box": [
+          1.0,
+          22.6,
+          421.2,
+          396.2
+        ]
+      },
+      {
+        "label": "zebra",
+        "confidence": 0.3951,
+        "box": [
+          127.7,
+          24.5,
+          440.1,
+          394.5
+        ]
+      }
+    ]
+  },
+  {
+    "model": "baseline_yolo11n",
+    "case": "people_bus",
+    "seconds": 0.36,
+    "expected_labels_present": [
+      "bus",
+      "person"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9035,
+        "box": [
+          222.1,
+          407.9,
+          348.3,
+          861.0
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.872,
+        "box": [
+          668.1,
+          396.0,
+          809.6,
+          880.2
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.8455,
+        "box": [
+          48.5,
+          399.3,
+          247.9,
+          903.8
+        ]
+      },
+      {
+        "label": "bus",
+        "confidence": 0.8244,
+        "box": [
+          74.8,
+          227.2,
+          802.6,
+          744.1
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.5613,
+        "box": [
+          0.4,
+          560.4,
+          64.2,
+          871.8
+        ]
+      }
+    ]
+  },
+  {
+    "model": "baseline_yolo11n",
+    "case": "user_gorilla_screenshot",
+    "seconds": 0.29,
+    "expected_labels_present": [
+      "person"
+    ],
+    "missing_expected_labels": [
+      "gorilla"
+    ],
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9133,
+        "box": [
+          336.8,
+          65.3,
+          650.4,
+          625.2
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.7629,
+        "box": [
+          219.1,
+          215.7,
+          261.4,
+          334.3
+        ]
+      },
+      {
+        "label": "bear",
+        "confidence": 0.7011,
+        "box": [
+          60.0,
+          141.1,
+          212.5,
+          571.7
+        ]
+      },
+      {
+        "label": "bear",
+        "confidence": 0.407,
+        "box": [
+          313.0,
+          171.4,
+          435.7,
+          466.3
+        ]
+      }
+    ]
+  },
+  {
+    "model": "baseline_yolo11n",
+    "case": "gorilla_photo",
+    "seconds": 0.41,
+    "expected_labels_present": [],
+    "missing_expected_labels": [
+      "gorilla"
+    ],
+    "detections": [
+      {
+        "label": "bear",
+        "confidence": 0.6679,
+        "box": [
+          482.7,
+          150.0,
+          1820.1,
+          1743.6
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yolo_world_m",
+    "case": "giraffes",
+    "seconds": 2.31,
+    "expected_labels_present": [
+      "giraffe"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "giraffe",
+        "confidence": 0.9479,
+        "box": [
+          382.7,
+          63.7,
+          604.3,
+          358.6
+        ]
+      },
+      {
+        "label": "giraffe",
+        "confidence": 0.7707,
+        "box": [
+          51.7,
+          355.3,
+          182.4,
+          412.7
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yolo_world_m",
+    "case": "zebra",
+    "seconds": 1.71,
+    "expected_labels_present": [
+      "zebra"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "zebra",
+        "confidence": 0.8884,
+        "box": [
+          0.5,
+          21.4,
+          437.9,
+          402.5
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yolo_world_m",
+    "case": "people_bus",
+    "seconds": 1.03,
+    "expected_labels_present": [
+      "bus",
+      "person"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9229,
+        "box": [
+          669.7,
+          394.3,
+          809.9,
+          879.7
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.9063,
+        "box": [
+          223.8,
+          406.0,
+          344.0,
+          859.9
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.9018,
+        "box": [
+          50.5,
+          398.9,
+          247.1,
+          903.7
+        ]
+      },
+      {
+        "label": "bus",
+        "confidence": 0.8755,
+        "box": [
+          21.1,
+          229.7,
+          793.1,
+          741.7
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.8022,
+        "box": [
+          0.0,
+          551.1,
+          78.9,
+          872.7
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yolo_world_m",
+    "case": "user_gorilla_screenshot",
+    "seconds": 0.79,
+    "expected_labels_present": [
+      "person"
+    ],
+    "missing_expected_labels": [
+      "gorilla"
+    ],
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9327,
+        "box": [
+          346.8,
+          60.2,
+          651.2,
+          631.6
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.8461,
+        "box": [
+          216.8,
+          213.9,
+          261.1,
+          334.0
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.5498,
+        "box": [
+          57.5,
+          114.3,
+          125.2,
+          143.2
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.5483,
+        "box": [
+          310.5,
+          144.5,
+          377.3,
+          169.5
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.5106,
+        "box": [
+          341.0,
+          35.8,
+          421.2,
+          61.8
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.5066,
+        "box": [
+          324.9,
+          171.2,
+          435.3,
+          469.5
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.4805,
+        "box": [
+          211.4,
+          187.0,
+          291.7,
+          213.5
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.3672,
+        "box": [
+          61.3,
+          142.9,
+          212.8,
+          569.1
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yolo_world_m",
+    "case": "gorilla_photo",
+    "seconds": 2.22,
+    "expected_labels_present": [],
+    "missing_expected_labels": [
+      "gorilla"
+    ],
+    "detections": [
+      {
+        "label": "bear",
+        "confidence": 0.7131,
+        "box": [
+          464.6,
+          121.6,
+          1842.0,
+          1776.6
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yoloe_m",
+    "case": "giraffes",
+    "seconds": 2.95,
+    "expected_labels_present": [
+      "giraffe"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "giraffe",
+        "confidence": 0.9356,
+        "box": [
+          383.1,
+          69.9,
+          598.8,
+          353.8
+        ]
+      },
+      {
+        "label": "giraffe",
+        "confidence": 0.9024,
+        "box": [
+          53.8,
+          355.4,
+          180.1,
+          410.7
+        ]
+      },
+      {
+        "label": "elephant",
+        "confidence": 0.3204,
+        "box": [
+          414.1,
+          0.0,
+          523.3,
+          25.9
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yoloe_m",
+    "case": "zebra",
+    "seconds": 2.53,
+    "expected_labels_present": [
+      "zebra"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "zebra",
+        "confidence": 0.9486,
+        "box": [
+          2.2,
+          25.1,
+          437.1,
+          397.1
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yoloe_m",
+    "case": "people_bus",
+    "seconds": 3.27,
+    "expected_labels_present": [
+      "bus",
+      "person"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9572,
+        "box": [
+          226.1,
+          408.0,
+          342.3,
+          857.8
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.9411,
+        "box": [
+          671.2,
+          392.9,
+          809.0,
+          877.9
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.9355,
+        "box": [
+          53.7,
+          399.0,
+          244.5,
+          902.1
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.9032,
+        "box": [
+          0.7,
+          554.5,
+          76.0,
+          871.3
+        ]
+      },
+      {
+        "label": "bus",
+        "confidence": 0.7746,
+        "box": [
+          94.1,
+          233.1,
+          796.9,
+          732.6
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yoloe_m",
+    "case": "user_gorilla_screenshot",
+    "seconds": 2.4,
+    "expected_labels_present": [
+      "gorilla",
+      "person"
+    ],
+    "missing_expected_labels": [],
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9409,
+        "box": [
+          351.3,
+          66.6,
+          649.0,
+          631.0
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.8681,
+        "box": [
+          220.1,
+          215.5,
+          259.0,
+          332.1
+        ]
+      },
+      {
+        "label": "person",
+        "confidence": 0.8488,
+        "box": [
+          62.7,
+          142.9,
+          210.5,
+          567.4
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.7648,
+        "box": [
+          58.8,
+          114.8,
+          124.4,
+          139.9
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.7188,
+        "box": [
+          311.9,
+          144.9,
+          377.0,
+          169.2
+        ]
+      },
+      {
+        "label": "gorilla",
+        "confidence": 0.6886,
+        "box": [
+          314.8,
+          172.7,
+          434.2,
+          456.0
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.5621,
+        "box": [
+          213.6,
+          187.7,
+          290.1,
+          212.5
+        ]
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.5224,
+        "box": [
+          341.6,
+          36.5,
+          419.9,
+          61.3
+        ]
+      }
+    ]
+  },
+  {
+    "model": "wildlife_yoloe_m",
+    "case": "gorilla_photo",
+    "seconds": 3.08,
+    "expected_labels_present": [],
+    "missing_expected_labels": [
+      "gorilla"
+    ],
+    "detections": [
+      {
+        "label": "bear",
+        "confidence": 0.9376,
+        "box": [
+          485.1,
+          132.4,
+          1815.5,
+          1782.1
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,704 @@
+[
+  {
+    "profile": "Standard",
+    "case": "giraffes",
+    "seconds": 0.32,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "giraffe",
+        "confidence": 0.9009,
+        "box": [
+          376.9,
+          66.2,
+          599.6,
+          357.9
+        ],
+        "model_label": "giraffe",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      }
+    ],
+    "missing_expected_labels": []
+  },
+  {
+    "profile": "Standard",
+    "case": "zebra",
+    "seconds": 0.2,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "zebra",
+        "confidence": 0.9495,
+        "box": [
+          1.1,
+          23.6,
+          442.0,
+          401.8
+        ],
+        "model_label": "zebra",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      }
+    ],
+    "missing_expected_labels": []
+  },
+  {
+    "profile": "Standard",
+    "case": "people_bus",
+    "seconds": 0.3,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "bus",
+        "confidence": 0.9402,
+        "box": [
+          3.8,
+          229.4,
+          796.2,
+          728.4
+        ],
+        "model_label": "bus",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      },
+      {
+        "label": "person",
+        "confidence": 0.8882,
+        "box": [
+          671.0,
+          394.8,
+          809.8,
+          878.7
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      },
+      {
+        "label": "person",
+        "confidence": 0.8783,
+        "box": [
+          47.4,
+          399.6,
+          239.3,
+          904.2
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      },
+      {
+        "label": "person",
+        "confidence": 0.8558,
+        "box": [
+          223.1,
+          408.7,
+          344.5,
+          860.4
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      },
+      {
+        "label": "person",
+        "confidence": 0.6219,
+        "box": [
+          0.0,
+          556.1,
+          68.9,
+          872.4
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      }
+    ],
+    "missing_expected_labels": []
+  },
+  {
+    "profile": "Standard",
+    "case": "gorilla_photo",
+    "seconds": 0.28,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "bear",
+        "confidence": 0.8858,
+        "box": [
+          359.6,
+          91.1,
+          1364.8,
+          1326.8
+        ],
+        "model_label": "bear",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      }
+    ],
+    "missing_expected_labels": [
+      "gorilla"
+    ]
+  },
+  {
+    "profile": "Standard",
+    "case": "user_gorilla_screenshot",
+    "seconds": 0.2,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9185,
+        "box": [
+          337.7,
+          66.9,
+          651.6,
+          625.2
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      },
+      {
+        "label": "bear",
+        "confidence": 0.8503,
+        "box": [
+          59.5,
+          139.7,
+          214.5,
+          569.8
+        ],
+        "model_label": "bear",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      },
+      {
+        "label": "person",
+        "confidence": 0.554,
+        "box": [
+          219.7,
+          217.7,
+          261.9,
+          334.6
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLO11n / 640px"
+      }
+    ],
+    "missing_expected_labels": [
+      "gorilla"
+    ]
+  },
+  {
+    "profile": "Wildlife",
+    "case": "giraffes",
+    "seconds": 3.52,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "giraffe",
+        "confidence": 0.9356,
+        "box": [
+          383.1,
+          69.9,
+          598.8,
+          353.8
+        ],
+        "model_label": "giraffe",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "giraffe",
+            "similarity": 0.3018
+          },
+          {
+            "label": "cheetah",
+            "similarity": 0.2507
+          },
+          {
+            "label": "zebra",
+            "similarity": 0.2452
+          }
+        ],
+        "name_similarity": 0.3018,
+        "name_margin": 0.0511,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "AI estimate"
+      },
+      {
+        "label": "animal (unverified)",
+        "confidence": 0.9024,
+        "box": [
+          53.8,
+          355.4,
+          180.1,
+          410.7
+        ],
+        "model_label": "giraffe",
+        "verified": false,
+        "species_candidate": false,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "snake",
+            "similarity": 0.2738
+          },
+          {
+            "label": "crocodile",
+            "similarity": 0.2625
+          },
+          {
+            "label": "giraffe",
+            "similarity": 0.2621
+          }
+        ],
+        "name_similarity": 0.2738,
+        "name_margin": 0.0113,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "Uncertain species"
+      }
+    ],
+    "missing_expected_labels": []
+  },
+  {
+    "profile": "Wildlife",
+    "case": "zebra",
+    "seconds": 1.44,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "zebra",
+        "confidence": 0.9486,
+        "box": [
+          2.2,
+          25.1,
+          437.1,
+          397.1
+        ],
+        "model_label": "zebra",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "zebra",
+            "similarity": 0.3106
+          },
+          {
+            "label": "antelope",
+            "similarity": 0.2562
+          },
+          {
+            "label": "giraffe",
+            "similarity": 0.2406
+          }
+        ],
+        "name_similarity": 0.3106,
+        "name_margin": 0.0544,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "AI estimate"
+      }
+    ],
+    "missing_expected_labels": []
+  },
+  {
+    "profile": "Wildlife",
+    "case": "people_bus",
+    "seconds": 1.84,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9572,
+        "box": [
+          226.1,
+          408.0,
+          342.3,
+          857.8
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "person",
+            "similarity": 0.2441
+          },
+          {
+            "label": "goat",
+            "similarity": 0.23
+          },
+          {
+            "label": "snake",
+            "similarity": 0.2115
+          }
+        ],
+        "name_similarity": 0.2441,
+        "name_margin": 0.0141,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "AI estimate"
+      },
+      {
+        "label": "person",
+        "confidence": 0.9411,
+        "box": [
+          671.2,
+          392.9,
+          809.0,
+          877.9
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "bus",
+            "similarity": 0.2561
+          },
+          {
+            "label": "truck",
+            "similarity": 0.2277
+          },
+          {
+            "label": "car",
+            "similarity": 0.2124
+          }
+        ],
+        "name_similarity": 0.2561,
+        "name_margin": 0.0284,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "AI estimate"
+      },
+      {
+        "label": "person",
+        "confidence": 0.9355,
+        "box": [
+          53.7,
+          399.0,
+          244.5,
+          902.1
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "bear",
+            "similarity": 0.2524
+          },
+          {
+            "label": "goat",
+            "similarity": 0.2511
+          },
+          {
+            "label": "person",
+            "similarity": 0.2496
+          }
+        ],
+        "name_similarity": 0.2524,
+        "name_margin": 0.0013,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "Conflicting predictions \u2014 review"
+      },
+      {
+        "label": "person",
+        "confidence": 0.9032,
+        "box": [
+          0.7,
+          554.5,
+          76.0,
+          871.3
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "snake",
+            "similarity": 0.2236
+          },
+          {
+            "label": "person",
+            "similarity": 0.22
+          },
+          {
+            "label": "crocodile",
+            "similarity": 0.2159
+          }
+        ],
+        "name_similarity": 0.2236,
+        "name_margin": 0.0036,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "Conflicting predictions \u2014 review"
+      },
+      {
+        "label": "bus",
+        "confidence": 0.7746,
+        "box": [
+          94.1,
+          233.1,
+          796.9,
+          732.6
+        ],
+        "model_label": "bus",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px"
+      }
+    ],
+    "missing_expected_labels": []
+  },
+  {
+    "profile": "Wildlife",
+    "case": "gorilla_photo",
+    "seconds": 1.27,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "gorilla",
+        "confidence": 0.9371,
+        "box": [
+          360.8,
+          98.9,
+          1353.9,
+          1328.5
+        ],
+        "model_label": "bear",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "gorilla",
+            "similarity": 0.3252
+          },
+          {
+            "label": "chimpanzee",
+            "similarity": 0.306
+          },
+          {
+            "label": "monkey",
+            "similarity": 0.2834
+          }
+        ],
+        "name_similarity": 0.3252,
+        "name_margin": 0.0192,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "AI estimate"
+      }
+    ],
+    "missing_expected_labels": []
+  },
+  {
+    "profile": "Wildlife",
+    "case": "user_gorilla_screenshot",
+    "seconds": 1.17,
+    "threshold": 0.35,
+    "detections": [
+      {
+        "label": "person",
+        "confidence": 0.9409,
+        "box": [
+          351.3,
+          66.6,
+          649.0,
+          631.0
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "gorilla",
+            "similarity": 0.2777
+          },
+          {
+            "label": "monkey",
+            "similarity": 0.263
+          },
+          {
+            "label": "chimpanzee",
+            "similarity": 0.2551
+          }
+        ],
+        "name_similarity": 0.2777,
+        "name_margin": 0.0147,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "Conflicting predictions \u2014 review"
+      },
+      {
+        "label": "person",
+        "confidence": 0.8681,
+        "box": [
+          220.1,
+          215.5,
+          259.0,
+          332.1
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "person",
+            "similarity": 0.2534
+          },
+          {
+            "label": "gorilla",
+            "similarity": 0.2444
+          },
+          {
+            "label": "monkey",
+            "similarity": 0.2386
+          }
+        ],
+        "name_similarity": 0.2534,
+        "name_margin": 0.009,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "AI estimate"
+      },
+      {
+        "label": "person",
+        "confidence": 0.8488,
+        "box": [
+          62.7,
+          142.9,
+          210.5,
+          567.4
+        ],
+        "model_label": "person",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "bear",
+            "similarity": 0.3127
+          },
+          {
+            "label": "gorilla",
+            "similarity": 0.2862
+          },
+          {
+            "label": "chimpanzee",
+            "similarity": 0.2582
+          }
+        ],
+        "name_similarity": 0.3127,
+        "name_margin": 0.0265,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "Conflicting predictions \u2014 review"
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.7648,
+        "box": [
+          58.8,
+          114.8,
+          124.4,
+          139.9
+        ],
+        "model_label": "traffic sign",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px"
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.7188,
+        "box": [
+          311.9,
+          144.9,
+          377.0,
+          169.2
+        ],
+        "model_label": "traffic sign",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px"
+      },
+      {
+        "label": "gorilla",
+        "confidence": 0.6886,
+        "box": [
+          314.8,
+          172.7,
+          434.2,
+          456.0
+        ],
+        "model_label": "gorilla",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px",
+        "name_candidates": [
+          {
+            "label": "gorilla",
+            "similarity": 0.2802
+          },
+          {
+            "label": "monkey",
+            "similarity": 0.2733
+          },
+          {
+            "label": "chimpanzee",
+            "similarity": 0.2681
+          }
+        ],
+        "name_similarity": 0.2802,
+        "name_margin": 0.0069,
+        "naming_model": "CLIP ViT-B/32",
+        "naming_status": "AI estimate \u2014 matching predictions, close alternatives"
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.5621,
+        "box": [
+          213.6,
+          187.7,
+          290.1,
+          212.5
+        ],
+        "model_label": "traffic sign",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px"
+      },
+      {
+        "label": "traffic sign",
+        "confidence": 0.5224,
+        "box": [
+          341.6,
+          36.5,
+          419.9,
+          61.3
+        ],
+        "model_label": "traffic sign",
+        "verified": false,
+        "species_candidate": true,
+        "detector": "YOLOE-11m + CLIP / 960px"
+      }
+    ],
+    "missing_expected_labels": []
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "label": "gorilla",
+    "confidence": 0.9376,
+    "box": [
+      485.1,
+      132.4,
+      1815.5,
+      1782.1
+    ],
+    "model_label": "bear",
+    "verified": false,
+    "species_candidate": true,
+    "detector": "YOLOE-11m + CLIP / 960px",
+    "name_candidates": [
+      {
+        "label": "gorilla",
+        "similarity": 0.3271
+      },
+      {
+        "label": "chimpanzee",
+        "similarity": 0.3082
+      },
+      {
+        "label": "monkey",
+        "similarity": 0.285
+      }
+    ],
+    "name_similarity": 0.3271,
+    "name_margin": 0.0189,
+    "naming_model": "CLIP ViT-B/32",
+    "naming_status": "AI estimate"
+  }
+]

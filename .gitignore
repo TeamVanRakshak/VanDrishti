@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+data/
+models/
+.runtime/
+Ultralytics/
+PROJECT_PLAN.md

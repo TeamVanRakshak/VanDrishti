@@ -1,0 +1,66 @@
+[
+  {
+    "label": "giraffe",
+    "confidence": 0.9356,
+    "box": [
+      383.1,
+      69.9,
+      598.8,
+      353.8
+    ],
+    "model_label": "giraffe",
+    "verified": false,
+    "species_candidate": true,
+    "detector": "YOLOE-11m + CLIP / 960px",
+    "name_candidates": [
+      {
+        "label": "giraffe",
+        "similarity": 0.3018
+      },
+      {
+        "label": "cheetah",
+        "similarity": 0.2507
+      },
+      {
+        "label": "zebra",
+        "similarity": 0.2452
+      }
+    ],
+    "name_similarity": 0.3018,
+    "name_margin": 0.0511,
+    "naming_model": "CLIP ViT-B/32",
+    "naming_status": "AI estimate"
+  },
+  {
+    "label": "animal (unverified)",
+    "confidence": 0.9024,
+    "box": [
+      53.8,
+      355.4,
+      180.1,
+      410.7
+    ],
+    "model_label": "giraffe",
+    "verified": false,
+    "species_candidate": false,
+    "detector": "YOLOE-11m + CLIP / 960px",
+    "name_candidates": [
+      {
+        "label": "snake",
+        "similarity": 0.2738
+      },
+      {
+        "label": "crocodile",
+        "similarity": 0.2625
+      },
+      {
+        "label": "giraffe",
+        "similarity": 0.2621
+      }
+    ],
+    "name_similarity": 0.2738,
+    "name_margin": 0.0113,
+    "naming_model": "CLIP ViT-B/32",
+    "naming_status": "Uncertain species"
+  }
+]
