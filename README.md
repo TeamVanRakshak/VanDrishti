@@ -8,7 +8,7 @@ Local wildlife imagery analysis, camera mapping and operator-reviewed access ale
 
 Double-click **start.cmd** and open http://127.0.0.1:8501. Keep the terminal open. Stop with Ctrl+C.
 
-On another Windows laptop, install Python 3.12, then run:
+On another Windows laptop, install Python 3.12 or 3.13, then run:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\setup.ps1
@@ -42,9 +42,21 @@ SQLite stores metadata and upload filenames in `data/observations.sqlite3`; imag
 
 ## Checks
 
+One command runs every check; a build phase is complete only when it exits with code 0:
+
 ```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
-.\.venv\Scripts\python.exe smoke_test.py
+.\.venv\Scripts\python.exe run_checks.py                   # unit tests, real-model smoke test, evaluation set
+.\.venv\Scripts\python.exe run_checks.py --eval --phase 0  # also measure both engines (several minutes)
 ```
+
+## Evaluation set
+
+`evaluation/eval_set/manifest.json` lists 300 held-out images with ground-truth boxes: 100 day (ENA24 camera traps, COCO), 100 night (ENA24 infrared camera traps, BIRDSAI thermal drone) and 100 aerial (WAID, VisDrone). `setup.ps1` downloads the images and checks their SHA-256; to do it by hand, run `python evaluation/eval_set.py fetch`. Images are not committed, and WAID and VisDrone images must not be redistributed.
+
+`python evaluation/evaluate.py` scores each engine per condition and source: precision and recall for person, vehicle and animal at IoU 0.5, recall by object size, species accuracy, and category confusions. Results are saved in `evaluation/results/`. Targets for later phases are in `evaluation/targets.json`.
+
+## Demo clips
+
+`python demo/fetch_clips.py` prepares three clips in `demo/clips/`: a daytime elephant herd in Assam, a night thermal drone video with people and animals (with ground-truth tracks), and drone footage of a car in a forest. Attribution and licences: `demo/SOURCES.md`.
 
 Sources: https://docs.ultralytics.com/models/yoloe/ and https://github.com/ultralytics/CLIP. Ultralytics licensing: https://www.ultralytics.com/license (AGPL-3.0 / enterprise options). Image attribution: `samples/SOURCES.md`.

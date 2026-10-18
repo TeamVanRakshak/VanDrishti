@@ -1,0 +1,24 @@
+{
+ "status": "Proposed 2026-10-18; confirm or adjust with the team before Phase 3 starts",
+ "engine": "Wildlife",
+ "targets": [
+  {"metric": "overall.person.recall", "min": 0.90, "from_phase": 3, "why": "Abstract: human-intrusion recall above 90%"},
+  {"metric": "overall.person.precision", "min": 0.80, "from_phase": 3, "why": "Animals or objects mistaken for people become false alarms"},
+  {"metric": "overall.vehicle.recall", "min": 0.85, "from_phase": 3, "why": "Unauthorised vehicles are a core threat (PS item 3)"},
+  {"metric": "overall.animal.recall", "min": 0.80, "from_phase": 3, "why": "Census and conflict alerts need animals found (PS item 1)"},
+  {"metric": "overall.species.accuracy_when_named", "min": 0.80, "from_phase": 3, "why": "When we commit to a species name it should usually be right; uncertain ones stay unverified"},
+  {"metric": "overall.species.accuracy", "min": 0.60, "from_phase": 3, "why": "Species identified where data allows (PS item 2)"},
+  {"metric": "night.person.recall", "min": 0.85, "from_phase": 7, "why": "Night poaching scenario (PS item 5)"},
+  {"metric": "aerial.person.recall", "min": 0.70, "from_phase": 7, "why": "Small people seen from drones (PS item 5)"},
+  {"metric": "aerial.vehicle.recall", "min": 0.75, "from_phase": 7, "why": "Vehicles seen from drones"},
+  {"metric": "aerial.animal.recall", "min": 0.75, "from_phase": 7, "why": "Drone wildlife census"},
+  {"metric": "day.person.recall", "min": 0.90, "from_phase": 7, "why": "Night and aerial improvements must not cost daytime recall"}
+ ],
+ "system_targets": [
+  {"phase": 2, "check": "Sustained processing of at least 5 frames per second per stream on a team laptop"},
+  {"phase": 2, "check": "Frame lag stays under 1 second when inference is slower than the camera"},
+  {"phase": 2, "check": "IDF1 of at least 0.60 on demo/clips/night_thermal_people.mp4 against its ground-truth tracks"},
+  {"phase": 4, "check": "At least 80% fewer alerts than per-frame alerting on the night clip, while every person track still raises an alert (abstract)"},
+  {"phase": 8, "check": "Under 5 seconds from first sighting in a frame to the alert arriving on Telegram (abstract)"}
+ ]
+}

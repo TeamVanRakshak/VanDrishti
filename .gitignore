@@ -5,3 +5,6 @@ models/
 .runtime/
 Ultralytics/
 PROJECT_PLAN.md
+evaluation/.cache/
+evaluation/eval_set/images/
+demo/clips/
